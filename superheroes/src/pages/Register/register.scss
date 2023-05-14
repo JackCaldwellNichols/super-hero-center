@@ -1,0 +1,34 @@
+.register{
+    background-image: url('https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/1200/public/media/image/2014/12/418278-avance-primer-comic-star-wars-nueva-era-marvel.jpg?itok=ZH6SZWw5');
+    background-size: 100%;
+    height: 100vh;
+    font-family: 'Roboto';
+  
+    .wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        flex-direction: column;
+        gap: 40px;
+        color: white;
+        input{
+
+            height: 40px;
+            width: 200px;
+            padding-left: 10px;
+        }
+        .regBtn {
+            
+                background-color: red;
+                padding: 10px;
+                width: 150px;
+                border-radius: 20px;
+                border: none;
+                color: white;
+                font-family: 'Roboto';
+                letter-spacing: 1px;
+            
+        }
+    }
+}

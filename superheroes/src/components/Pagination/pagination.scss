@@ -1,0 +1,13 @@
+.list{
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    padding: 40px;
+    font-family: 'Roboto';
+    text-shadow: 6px 6px 6px #000000;
+    .pageNum {
+       cursor: pointer;
+       margin-right: 15px;
+    
+    }
+}

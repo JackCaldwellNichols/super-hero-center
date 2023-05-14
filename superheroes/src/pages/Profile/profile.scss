@@ -1,0 +1,101 @@
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: max-content;
+    background: url('https://rare-gallery.com/mocahbig/39488-Gotham-City-NightGotham-City-HD-Wallpaper.png') ;
+    background-size: cover;
+    -webkit-background-size: cover;
+    gap: 50px;
+    font-family: 'Bangers';
+    padding: 20px;
+    .top{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        width: 50vw;
+        font-size: 25px;
+        letter-spacing: 1px;
+        img{
+            height: 300px;
+            width: 300px;
+            border-radius: 50%;
+            padding: 20px;
+        }
+        h3 {
+            text-align: center;
+            letter-spacing: 1px;
+        }
+    }
+
+    .middle{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        gap: 100px;
+        width: 70vh;
+        .left {
+            
+            h4{
+                padding: 5px;
+                letter-spacing: 1px;
+                font-size: 20px
+            };
+        }
+        .right{
+            
+            h4{
+                padding: 5px;
+                letter-spacing: 1px;
+                font-size: 20px
+            };
+        }
+    }
+    .buttonContainer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    .favourites{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 70%;
+        margin: 50px 0px;
+        h2{
+            text-align: center;
+            justify-self: center;
+            color: white;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+        .favWrapper{
+        img {
+            margin: 15px;
+            border-radius: 5px;
+            height: 150px;
+        }
+    }
+    }
+    .buttonContainer{
+        .btnProfile{
+        background-color: red;
+        padding: 10px;
+        width: 150px;
+        border-radius: 20px;
+        border: none;
+        color: white;
+        font-family: 'Roboto';
+        letter-spacing: 1px;
+        align-self: center;
+        margin: 20px 0px;
+        cursor: pointer;
+        }
+    }
+}

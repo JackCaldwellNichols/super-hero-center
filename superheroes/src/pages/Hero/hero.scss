@@ -1,0 +1,71 @@
+.hero {
+    display: flex;
+    flex-direction: column;
+    padding: 60px 20px 20px 20px;
+background: url('https://www.boweryboyshistory.com/wp-content/uploads/2020/07/Amazing-Spiderman.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    -webkit-background-size: cover;
+    background-repeat: no-repeat;
+    align-items: center;
+    height: 150vh;
+    gap: 50px;
+    
+    .banner{
+        .heroName {
+            font-family: 'Bangers';
+            font-size: 50px;
+            color: red;
+            text-shadow: 6px 6px 6px #000000;
+            letter-spacing: 3px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        img {
+            object-fit: contain;
+            width: 500px;
+            height: 400px;
+        }
+    }
+    .middle{
+        display: flex;
+        align-items: center;
+        gap: 100px;
+        color: rgb(255, 255, 255);
+        text-shadow: 6px 6px 6px #000000;
+        font-size: 20px;
+        font-family: 'Bangers';
+        letter-spacing: 1.5px;
+    .left{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        h4{
+            padding: 5px;
+            
+        }
+
+    }
+    .right{     
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        h4{
+            padding: 5px;
+        }
+    }
+}
+        button{
+            background-color: red;
+            padding: 10px;
+            margin-right: 10px;
+            margin-top: 10px;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+    }

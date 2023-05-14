@@ -1,0 +1,14 @@
+*{
+  margin: 0;
+  padding: 0;
+
+
+}
+
+
+
+.link{
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}

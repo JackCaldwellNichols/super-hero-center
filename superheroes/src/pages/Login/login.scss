@@ -1,0 +1,54 @@
+.login{
+    background: url('https://res.cloudinary.com/dzcz4e9nd/image/upload/v1683228934/pxfuel_qs6tad.jpg') no-repeat center center fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    height: 100vh;
+    .banner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    &:first-child{
+        height: 250px;
+        padding-top: 20px;
+    }    
+    h1{
+       font-family: 'Bangers';
+        margin-top: -60px;
+        color: red;
+        letter-spacing: 3px;
+        font-size: 40px;
+        text-shadow: 6px 6px 6px #000000;
+    }
+}
+    .wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+        color: white;
+        font-family: 'Roboto';
+        letter-spacing: 1px;
+        margin-top: 40px;
+        input{
+            height: 40px;
+            width: 200px;
+            padding-left: 10px;
+        }
+        .loginBtn{
+            background-color: red;
+            padding: 10px;
+            width: 150px;
+            border-radius: 20px;
+            border: none;
+            color: white;
+            font-family: 'Roboto';
+            letter-spacing: 1px;
+        }
+        .signUpWrapper{
+            text-shadow: 6px 6px 6px #000000;
+        }
+    }
+
+}

@@ -1,0 +1,105 @@
+.quizMain {
+  background: url('https://cdn.shopify.com/s/files/1/1140/8354/articles/best_marvel_comics.jpg?v=1635257623');
+  background-size: 100%;
+  object-fit: cover;
+  height: 100vh;
+  font-family: 'Roboto';
+  padding: 20px;
+
+  .titleWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: red;
+    text-shadow: 6px 6px 6px #000000;
+    font-family: 'Bangers';
+    margin: 50px 0px;
+    h1{
+      font-size: 70px;
+    }
+  }
+
+
+
+.question-card {
+    /* Center the div  */
+    margin: 0 auto;
+    text-align: center;
+    /* Dimensions  */
+    width: 40%; /* Can be in percentage also. */
+    height: auto;
+  
+    /* Visual  */
+    background-color: rgb(96, 91, 50) ;
+    padding: 16px;
+    border-radius: 16px;
+    color: red;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+      rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  }
+  
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .quizLi {
+    margin-top: 8px;
+    background-color: white;
+    padding: 10px;
+    width: 50%;
+    border: 3px solid rgb(230, 228, 228);
+    border-radius: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    &:hover{
+      background-color: rgb(229, 229, 229);
+    }
+  }
+  
+  .question-text {
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+  }
+  
+  /* Final Results  */
+  
+  .final-results {
+    /* Center the div  */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    /* Dimensions  */
+    width: 30%; /* Can be in percentage also. */
+    height: auto;
+    margin-top: 64px;
+  
+    /* Visual  */
+    background-color: gray;
+    padding: 16px;
+    border-radius: 16px;
+    color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+      rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  }
+  
+  .quizBtn {
+    background-color: red; /* Green */
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    letter-spacing: 1px;
+    border-radius: 24px;
+    margin: 15px 10px 0px 0px;
+  }
+
+}
