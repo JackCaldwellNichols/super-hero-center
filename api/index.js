@@ -11,6 +11,9 @@ const cors = require('cors')
 dotenv.config()
 app.use(express.json())
 app.use(cors())
+app.get('/', (req, res) => {
+    res.sendStatus(200)
+  })
 app.use('/api/auth/', authRoute)
 app.use('/api/user/', userRoute)
 
