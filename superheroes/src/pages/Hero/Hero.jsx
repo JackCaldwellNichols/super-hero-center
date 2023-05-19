@@ -57,7 +57,7 @@ fetchHero()
 
   useEffect(() => {
     const fetchFav = async () => {
-      const res = await axios.get(`http://localhost:8000/api/user/${user._id}`)
+      const res = await axios.get(import.meta.env.VITE_SERVER_URL + `/api/user/${user._id}`)
       setFavId(res.data._doc.favourites)
     }
     fetchFav()
@@ -68,7 +68,7 @@ fetchHero()
 
   const handleAdd = async () => {
     try {
-      await axios.put(`http://localhost:8000/api/user/${path}/add`, {
+      await axios.put(import.meta.env.VITE_SERVER_URL + `/api/user/${path}/add`, {
         userId: user._id
       })
       toastifySuccess()
@@ -84,7 +84,7 @@ fetchHero()
 
   const handleRemove = async () => {
     try {
-      await axios.put(`http://localhost:8000/api/user/${path}/unfavourite`, {
+      await axios.put(import.meta.env.VITE_SERVER_URL + `/api/user/${path}/unfavourite`, {
         userId: user._id
       })
       dispatch({type: 'REMOVE:FAV', payload: user._id})
@@ -127,7 +127,7 @@ fetchHero()
            </div>
            </div>
            <div className="heroBtnWrapper">
-           <Link to='/home'>
+           <Link to='/'>
               <button>Back Home</button>
             </Link>
   

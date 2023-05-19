@@ -1,17 +1,37 @@
 .register{
-    background-image: url('https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/1200/public/media/image/2014/12/418278-avance-primer-comic-star-wars-nueva-era-marvel.jpg?itok=ZH6SZWw5');
-    background-size: 100%;
-    height: 100vh;
-    font-family: 'Roboto';
+    background: url('https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/1200/public/media/image/2014/12/418278-avance-primer-comic-star-wars-nueva-era-marvel.jpg?itok=ZH6SZWw5') no-repeat center center fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    height: 110vh;
+    .banner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    &:first-child{
+        height: 250px;
+        padding-top: 20px;
+    }    
+    h1{
+       font-family: 'Bangers';
+        margin-top: -60px;
+        color: red;
+        letter-spacing: 3px;
+        font-size: 40px;
+        text-shadow: 6px 6px 6px #000000;
+    }
+}
   
     .wrapper{
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100%;
         flex-direction: column;
-        gap: 40px;
+        gap: 30px;
         color: white;
+        font-family: 'Roboto';
+        letter-spacing: 1px;
+        margin-top: 40px;
         input{
 
             height: 40px;

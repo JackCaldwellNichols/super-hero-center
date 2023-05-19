@@ -20,7 +20,7 @@ const Register = () => {
     e.preventDefault()
 
       try {
-        const res = await axios.post('http://localhost:8000/api/auth/register', {
+        const res = await axios.post(import.meta.env.VITE_SERVER_URL +'/api/auth/register', {
           name: FirstNameRef.current.value,
           lastName: LastNameRef.current.value,
           email: emailRef.current.value,
@@ -36,6 +36,10 @@ const Register = () => {
 
   return (
     <div className='register'>
+          <div className="banner">
+        <img src='https://res.cloudinary.com/dzcz4e9nd/image/upload/v1683699398/4-removebg-preview_tuqedr.png' className='banner'/>
+        <h1 className='centre'>Center</h1>
+      </div>
       <form className="wrapper" onSubmit={handleSubmit}>
         <h1>Sign Up</h1>
         <input placeholder='First Name' className='name' type='text' ref={FirstNameRef} required/>
@@ -47,7 +51,7 @@ const Register = () => {
         <button type='submit' className='regBtn'>Sign Up</button>
    
             <span>Already have an account?    
-                <Link to='/login'>Log in here.</Link>
+                <Link to='/login' className='link'> Log in here.</Link>
             </span>
         
       </form>

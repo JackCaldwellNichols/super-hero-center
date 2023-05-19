@@ -1,7 +1,6 @@
 import { useState, Suspense, useContext} from 'react'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Navbar from './components/Navbar/Navbar'
-import Enter from './pages/Enter/Enter'
 import Hero from './pages/Hero/Hero'
 import Loading from './pages/Loading/Loading'
 import Home from './pages/home/Home'
@@ -27,8 +26,7 @@ function App() {
     
     <Navbar />
       <Routes>
-        <Route path= '/' element={<Enter />}/>
-        <Route path='/home' element={<Home />} />
+        <Route path='/' element={<Home />} />
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
         <Route path='/hero/:id' element={<Hero />} />

@@ -54,7 +54,7 @@ useEffect(() => {
             intelligence: score * 10
         };
         try {
-          const res = await axios.put(`http://localhost:8000/api/user/${userId}`, updatedUser)
+          const res = await axios.put(import.meta.env.VITE_SERVER_URL + `/api/user/${userId}`, updatedUser)
           dispatch({type:'UPDATE_SUCCESS', payload: res.data})
           nav(`/profile/${userId}`)
         } catch (error) {

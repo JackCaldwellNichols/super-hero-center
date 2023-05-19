@@ -36,7 +36,7 @@ const Edit = () => {
             gender
         };
             try {
-                const res = await axios.put(`http://localhost:8000/api/user/${userId}`, updatedUser)
+                const res = await axios.put(import.meta.env.VITE_SERVER_URL + `/api/user/${userId}`, updatedUser)
                 dispatch({type:'UPDATE_SUCCESS', payload: res.data})
                 toastifySuccess()
                 setSuccess(true)
@@ -53,7 +53,7 @@ const Edit = () => {
     const toastifySuccess = () => {
         toast("Account updated!", {
           position: 'bottom-center',
-          autoClose: 5000,
+          autoClose: 3000,
           hideProgressBar: false,
           closeOnClick: true,
           backgroundColor: "lime",
@@ -67,7 +67,7 @@ const Edit = () => {
       const toastifyDelete = () => {
         toast("Account deleted - sad to see you go!", {
           position: 'bottom-center',
-          autoClose: 5000,
+          autoClose: 3000,
           hideProgressBar: false,
           closeOnClick: true,
           backgroundColor: "red",
@@ -80,7 +80,7 @@ const Edit = () => {
 
 const handleDelete = async () => {
 try {
-    await axios.delete(`http://localhost:8000/api/user/${userId}`, {
+    await axios.delete(import.meta.env.VITE_SERVER_URL +`/api/user/${userId}`, {
         data: {userId: user._id }
     })
     dispatch({type:'LOGOUT'})

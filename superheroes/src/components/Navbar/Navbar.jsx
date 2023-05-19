@@ -10,14 +10,14 @@ const {user, dispatch} = useContext(Context)
 const nav = useNavigate()
 const handleLogout = () => {
   dispatch({type: "LOGOUT"})
-  nav('/home')
+  nav('/')
 
 }
 
   return (
     <div className='navbar'>
       <div className="left">
-        <Link to='/home' className='link'>
+        <Link to='/' className='link'>
             <img className='logo' src='https://res.cloudinary.com/dzcz4e9nd/image/upload/v1683716426/Disen%CC%83o_sin_ti%CC%81tulo-removebg-preview_iiuusi.png'/>
         </Link>
       </div>

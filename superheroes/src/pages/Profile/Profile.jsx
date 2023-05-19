@@ -15,11 +15,9 @@ const Profile = () => {
   const empty = []
   const emptyId = []
 
-console.log(user)
-
   useEffect(() => {
     const fetchFav = async () => {
-      const res = await axios.get(`http://localhost:8000/api/user/${userId}`)
+      const res = await axios.get(`https://herocenter.onrender.com/api/user/${userId}`)
       setFavourites(res.data._doc.favourites)
     }
     fetchFav()
@@ -57,8 +55,7 @@ const aligner = () => {
 }
 aligner()
 }, [favourites])
-console.log(badCount)
-console.log(goodCount)
+
 
   return (
    
@@ -96,7 +93,7 @@ console.log(goodCount)
         </div>
     </div>
     <div className="buttonContainer">
-        <Link to='/home'>
+        <Link to='/'>
           <button className='btnProfile'>Back Home</button>
         </Link>
         <Link to={`/edit/${user._id}`}>
