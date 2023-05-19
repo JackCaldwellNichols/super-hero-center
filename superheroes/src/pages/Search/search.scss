@@ -13,6 +13,10 @@
     height: 2000vh;
     align-items: center;
     justify-content: flex-start;
+    @include mobile {
+        background: url(none);
+        background-color: black;
+     }
     .wrapper{
         padding: 50px;
         display: flex;
@@ -20,6 +24,9 @@
         align-items: center;
         flex-direction: column;
         gap: 100px;
+        @include mobile {
+            padding: 20px;
+         }
         .top{
             display: flex;
             flex-direction: column;
