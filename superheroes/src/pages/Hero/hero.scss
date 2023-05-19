@@ -1,3 +1,5 @@
+@import "../../globals.scss";
+
 .hero {
     display: flex;
     flex-direction: column;
@@ -24,6 +26,9 @@ background: url('https://www.boweryboyshistory.com/wp-content/uploads/2020/07/Am
             object-fit: contain;
             width: 500px;
             height: 400px;
+            @include mobile {
+                height: 300px
+             }
         }
     }
     .middle{
@@ -67,5 +72,9 @@ background: url('https://www.boweryboyshistory.com/wp-content/uploads/2020/07/Am
             border: none;
             border-radius: 20px;
             cursor: pointer;
+
+            @include mobile {
+                margin-top: 0px;
+             }
         }
     }

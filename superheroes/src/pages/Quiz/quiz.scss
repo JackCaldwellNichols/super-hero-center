@@ -1,3 +1,6 @@
+@import "../../globals.scss";
+
+
 .quizMain {
   background: url('https://cdn.shopify.com/s/files/1/1140/8354/articles/best_marvel_comics.jpg?v=1635257623');
   background-size: 100%;
@@ -5,6 +8,11 @@
   height: 100vh;
   font-family: 'Roboto';
   padding: 20px;
+  @include mobile {
+    background: url(none);
+    background-color: black;
+    height: 100vh;
+ }
 
   .titleWrapper {
     display: flex;
@@ -17,6 +25,10 @@
     margin: 50px 0px;
     h1{
       font-size: 70px;
+      @include mobile {
+        text-align: center;
+        font-size: 50px;
+     }
     }
   }
 
@@ -37,6 +49,9 @@
     color: red;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
       rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+      @include mobile {
+        width: 80%;
+     }
   }
   
   ul {
@@ -86,6 +101,9 @@
     color: white;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
       rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+      @include mobile {
+        width: 80%;
+     }
   }
   
   .quizBtn {

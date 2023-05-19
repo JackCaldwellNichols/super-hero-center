@@ -1,8 +1,16 @@
+@import "../../globals.scss";
+
+
+
 .register{
     background: url('https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/1200/public/media/image/2014/12/418278-avance-primer-comic-star-wars-nueva-era-marvel.jpg?itok=ZH6SZWw5') no-repeat center center fixed;
     background-size: cover;
     -webkit-background-size: cover;
     height: 110vh;
+    @include mobile {
+        height: max-content;
+        padding: 0px 0px 30px 0px;
+     }
     .banner{
         display: flex;
         flex-direction: column;
@@ -11,6 +19,9 @@
     &:first-child{
         height: 250px;
         padding-top: 20px;
+        @include mobile {
+            height: 200px;
+         }
     }    
     h1{
        font-family: 'Bangers';
@@ -19,6 +30,10 @@
         letter-spacing: 3px;
         font-size: 40px;
         text-shadow: 6px 6px 6px #000000;
+        @include mobile {
+            height: 30px;
+            margin-top: -30px;
+         }
     }
 }
   

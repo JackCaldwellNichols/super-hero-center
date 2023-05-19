@@ -1,9 +1,16 @@
+@import "../../globals.scss";
+
 .edit{
     padding: 20px;
     font-family: 'Roboto';
     color: white;
     background: url('https://img.freepik.com/free-vector/comic-style-wallpaper_79603-1248.jpg');
     background-size: 100%;
+    @include mobile {
+        background: url(none);
+        background-color: black;
+        gap: 30px;
+     }
     .wrapper{
         display: flex;
         align-items: center;
@@ -14,11 +21,19 @@
             .ProfilePic{
                 border-radius: 50%;
                 margin-bottom: 70px;
+                @include mobile {
+                  height: 180px;
+                  width: 180px;
+                 }
             }
         }
         .bottom{
             display: flex;
             gap: 200px;
+            @include mobile {
+                flex-direction: column;
+                gap: 20px;
+               }
             .left{
                 display: flex;
                 flex-direction: column;

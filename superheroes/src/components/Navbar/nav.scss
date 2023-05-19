@@ -1,3 +1,5 @@
+@import "../../globals.scss";
+
 .navbar{
     height: 60px;
     background-color: rgb(198, 94, 94);
@@ -7,8 +9,9 @@
     justify-content: space-between;
     position: sticky;
     font-family: 'Roboto';
+
     .left{
-        padding-left: 20px;
+        padding-left: 0px;
         img {
             height: 60px;
         }
@@ -19,6 +22,10 @@
         justify-content: center;
         align-items: center;
         gap: 30px;
+        @include mobile {
+            gap: 20px;
+            padding-right: 20px;
+         }
         .profilePic{
             height: 32px;
             width: 32px;

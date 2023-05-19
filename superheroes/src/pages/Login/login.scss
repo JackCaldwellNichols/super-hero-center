@@ -1,3 +1,5 @@
+@import "../../globals.scss";
+
 .login{
     background: url('https://res.cloudinary.com/dzcz4e9nd/image/upload/v1683228934/pxfuel_qs6tad.jpg') no-repeat center center fixed;
     background-size: cover;
@@ -11,6 +13,9 @@
     &:first-child{
         height: 250px;
         padding-top: 20px;
+        @include mobile {
+            height: 200px;
+         }
     }    
     h1{
        font-family: 'Bangers';
@@ -19,6 +24,10 @@
         letter-spacing: 3px;
         font-size: 40px;
         text-shadow: 6px 6px 6px #000000;
+        @include mobile {
+            height: 30px;
+            margin-top: -30px;
+         }
     }
 }
     .wrapper{
