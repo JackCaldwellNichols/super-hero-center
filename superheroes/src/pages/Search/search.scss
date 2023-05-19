@@ -1,3 +1,5 @@
+@import "../../globals.scss";
+
 .search{
     padding: 0px;
     margin: 0;
@@ -28,6 +30,10 @@
             font-family: 'Bangers';
             font-size: 40px;
             letter-spacing: 5px;
+            @include mobile {
+                font-size: 20px;
+                text-align: center;
+             }
      
             input{
                 height: 40px;
@@ -44,7 +50,7 @@
             flex-wrap: wrap;
             align-items: center;
             justify-content: center;
- 
+
 
         }
         }

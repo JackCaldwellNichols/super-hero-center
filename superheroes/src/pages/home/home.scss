@@ -6,11 +6,15 @@ display: flex;
 flex-direction: column;
 align-items: center;
 background: url('https://www.boweryboyshistory.com/wp-content/uploads/2020/07/Amazing-Spiderman.jpg') no-repeat center center fixed;
-position: absolute;
 top: 60px;
 background-size: cover;
 -webkit-background-size: cover;
-
+@include mobile {
+   background: url('https://www.boweryboyshistory.com/wp-content/uploads/2020/07/Amazing-Spiderman.jpg') no-repeat center center fixed;
+   background-color: black;
+   background-size: none;
+   -webkit-background-size: none;
+}
 
 
 .banner {
