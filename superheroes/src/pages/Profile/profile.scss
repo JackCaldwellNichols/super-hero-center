@@ -57,10 +57,11 @@
         @include mobile {
             gap: 10px;
             flex-direction: column;
+            
          
         }
         .left {
-            
+           
             h4{
                 padding: 5px;
                 letter-spacing: 1px;
@@ -68,7 +69,7 @@
             };
         }
         .right{
-            
+          
             h4{
                 padding: 5px;
                 letter-spacing: 1px;
@@ -125,6 +126,9 @@
         align-self: center;
         margin: 20px 0px;
         cursor: pointer;
+        &:hover{
+            background-color: rgb(159, 5, 5);
+        }
         
         }
     }

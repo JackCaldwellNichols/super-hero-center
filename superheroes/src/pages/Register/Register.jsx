@@ -20,16 +20,19 @@ const Register = () => {
     e.preventDefault()
 
       try {
+        dispatch({type: 'UPDATE_START'})
         const res = await axios.post(import.meta.env.VITE_SERVER_URL +'/api/auth/register', {
           name: FirstNameRef.current.value,
           lastName: LastNameRef.current.value,
           email: emailRef.current.value,
           password: passwordRef.current.value
         })
+        dispatch({type: 'UPDATE_SUCCESS'})
         res.data && (
           nav('/login')
         )
       } catch (error) {
+        dispatch({type: 'UPDATE_FAILURE'})
         console.log(error)
       }
   }
@@ -47,8 +50,11 @@ const Register = () => {
         <input placeholder='Email' className='email' type='email' ref={emailRef} required/>
         <input placeholder='Password' className='password' type='password' ref={passwordRef} required minLength={6}/>
         <input placeholder='Repeat Password' className='password' type='password' ref={passwordCheckRef} required />
-
-        <button type='submit' className='regBtn'>Sign Up</button>
+        {isFetching ? (
+          <button type='submit' className='regBtn'>Loading...</button>
+        ): (
+          <button type='submit' className='regBtn'>Sign Up</button>
+        )}
    
             <span>Already have an account?    
                 <Link to='/login' className='link'> Log in here.</Link>

@@ -54,6 +54,10 @@
             color: white;
             font-family: 'Roboto';
             letter-spacing: 1px;
+            cursor: pointer;
+            &:hover{
+                background-color: rgb(159, 5, 5);
+            }
         }
         .signUpWrapper{
             text-shadow: 6px 6px 6px #000000;

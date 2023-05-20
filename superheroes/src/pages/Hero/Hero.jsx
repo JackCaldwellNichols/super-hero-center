@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, { useContext, useEffect, useState } from 'react'
-import { Link, useLocation, useParams } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { Context } from '../../Context/Context'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -12,6 +12,7 @@ const location = useLocation()
 const path = location.pathname.split('/')[2]
 const [hero, setHero] = useState([])
 const [favId, setFavId] = useState([])
+const navigate = useNavigate()
 
 
 const toastifySuccess = () => {
@@ -73,7 +74,7 @@ fetchHero()
       })
       toastifySuccess()
       setTimeout(() => {
-        window.location.reload()
+        navigate('/')
     }, 2500)
     clearTimeout()
     } catch (error) {
@@ -90,7 +91,7 @@ fetchHero()
       dispatch({type: 'REMOVE:FAV', payload: user._id})
       toastifyRemove()
       setTimeout(() => {
-        window.location.reload()
+        navigate('/')
     }, 2500)
     clearTimeout()
     } catch (error) {

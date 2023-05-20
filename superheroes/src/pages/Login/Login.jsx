@@ -24,6 +24,7 @@ const Login = () => {
         dispatch({type: "LOGIN_SUCCESS", payload: res.data})
         nav('/')
       } catch (error) {
+        dispatch({type:'LOGIN_FAILURE'})
         console.log(error)
         alert(error.response.data)
       }
@@ -39,7 +40,12 @@ const Login = () => {
         <h1>Login</h1>
         <input placeholder='Email' className='email' type='text' ref={emailRef} required/>
         <input placeholder='Password' className='password' type='password' ref={passwordRef} required/>
-        <button type='submit' className='loginBtn'>LOGIN</button>
+        {isFetching ? (
+              <button type='submit' className='loginBtn'>LOADING...</button>
+        ) :(
+              <button type='submit' className='loginBtn'>LOGIN</button>
+        )}
+  
        
             <span className='signUpWrapper'>Don't have an account?    
                 <Link to='/register' className='link'> Sign Up here.</Link>

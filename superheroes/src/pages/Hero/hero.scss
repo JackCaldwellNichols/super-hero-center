@@ -72,6 +72,9 @@ background: url('https://www.boweryboyshistory.com/wp-content/uploads/2020/07/Am
             border: none;
             border-radius: 20px;
             cursor: pointer;
+            &:hover{
+                background-color: rgb(159, 5, 5);
+            }
 
             @include mobile {
                 margin-top: 0px;
