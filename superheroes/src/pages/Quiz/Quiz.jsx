@@ -62,7 +62,7 @@ useEffect(() => {
         }
   }
 
-
+console.log(q.results)
 
 
   return (
@@ -89,7 +89,7 @@ useEffect(() => {
           <h2>
             Question: {currentQuestion + 1} out of {q.results ? q.results.length : "Loading..."}
           </h2>
-          <h3 className="question-text">{q.results ? q.results[currentQuestion].question : "Loading"}</h3>
+          <h3 className="question-text">{q.results ? q.results[currentQuestion].question.replace(/(&quot\;)/g,"\"").replace(/(&#39;s)/g, "'") : "Loading"}</h3>
           <ul>
           {q.results ?  (<li onClick={() => optionClicked(q.results[currentQuestion].correct_answer)} className='quizLi'>{q.results[currentQuestion].correct_answer }</li>)
              : ( "Loading" )}
